@@ -34,7 +34,7 @@ if(isset($_POST['submit']))
     file_put_contents($fileName, $_POST['flow']);
     $sample_flow = $_POST['flow'];
     $cmd = '/usr/bin/java -jar plantuml.jar -o '.__DIR__."/img ".$fileName;
-    //echo $cmd."\n";
+
     shell_exec($cmd);
 }
 else
@@ -43,7 +43,6 @@ else
     
     file_put_contents($fileName, $sample_flow);
     $cmd = '/usr/bin/java -jar plantuml.jar -o '.__DIR__."/img ".$fileName;
-    //echo $cmd."\n";
     shell_exec($cmd);
 }
 ?>
